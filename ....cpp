@@ -1,0 +1,29 @@
+#include<stdio.h>
+main()
+{
+	int x,y,s,t,i,flag,a;
+	scanf("%d%d",&x,&y);
+	for(t=x;t<=y-2;t++)
+	   {
+	   		flag=1;
+			for(i=2;i<t;i++)
+			if(t%i==0) 
+			{
+				flag=0;
+				break;
+			}
+			if(flag==1)
+			{
+				a=t+2;
+				for(i=2;i<a;i++)
+				if(a%i==0)
+				{
+					flag=0;
+					break;
+				}
+				if(flag==1)
+				printf("(%d,%d)",t,a);
+			}
+	   }
+}
+
